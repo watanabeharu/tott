@@ -1,0 +1,360 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+a {
+  color: rgb(58, 57, 57);
+  text-decoration: none;
+}
+.container {
+  max-width: 1160px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+
+/* ヘッダー */
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header > .container {
+  height: 100px;
+  display: flex;
+   
+  align-items: center;
+  max-width: none;
+  padding: 0 60px;
+
+  position: fixed;/*nav固定ここ！　あとで全ページにつける*/
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+
+  background-color: rgba(247, 242, 242, 0.3);
+}
+
+
+/* ヘッダーナビ */
+.nav_header {
+  margin: 0 0 0 auto; 
+}
+.list_nav_header {
+  display: flex;
+  align-items: center;
+  margin: 0 -30px;
+}
+.list_nav_header > li {
+  padding: 0 15px;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+.list_nav_header a {
+  color: #fff;
+  font: 400 18px/1em 'Noto Serif JP', 'noto sans japanese',sans-serif;
+  text-shadow: black;
+}
+[class*="btn_ico"] {
+  color: #fff;
+  font: 400 18px/1em 'Noto Serif JP', 'noto sans japanese',sans-serif;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 30px 0 60px;
+  background: rgb(149, 191, 201);/*メールのbackcolor*/
+  box-shadow: 0px 7px 6px -4px rgba(16,61,72,.2);
+  position: relative;
+}
+[class*="btn_ico"]:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);/*mail iconの位置*/
+}
+[class*="btn_ico"][class*="mail"]:before {
+  background: url(../img/icon/mail.png);
+  color:white;
+}
+/*mail icon 消えちゃったあとでやる*/
+/*今見てるページ？？*/
+.current a {
+  color: #396fb6;
+  }
+
+
+
+/* TOP */
+.area_top_view {
+  background: url(../img/img_top.jpg) no-repeat bottom center;
+  background-size: cover;
+  background-position: center center;/*いらないかも*/
+}
+
+.area_top_view > .container {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*
+.area_top_view img {
+  height: 60px;
+  vertical-align: bottom;
+}
+*/
+
+/*ttl*/
+.area_top_view .ttl1 {
+  color: #fff;
+  text-shadow: 2px 3px 4px rgba(5, 5, 5, 0.2);
+  font: 30px 'Noto Serif JP', 'noto sans japanese',sans-serif;
+  letter-spacing: .05em;
+  margin-top: -270px;/*ttl位置変更*//*
+  padding: 10 0 0 0px;/*上右下左 50 0 0 40px /*
+  position: relative;*/
+  
+}
+
+/*
+.area_top_view .ttl:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/ico/ico_sns_youtube.svg) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/*ttl2*/
+
+
+.area_top_view .ttl2 {
+  color: #fff;
+  text-shadow: 1px 2px 3px rgba(5, 5, 5, 0.2);
+  font: 20px 'Noto Serif JP', 'noto sans japanese',sans-serif;
+  letter-spacing: .05em;/*
+  margin: 20px 0 0;*/
+  padding: 5px;/*上右下左 50 0 0 40px 
+  position: relative;*/
+  
+}
+/*
+.area_top_view .ttl2:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/ico/ico_sns_youtube.svg) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+*/
+
+.area_top_view .ttl3 {
+  color: #fff;
+  text-shadow: 1px 2px 3px rgba(5, 5, 5, 0.2);
+  font: 16px 'Noto Serif JP', 'noto sans japanese',sans-serif;
+  letter-spacing: .05em;/*
+  margin: 20px 0 0;*/
+  padding: 10px;/*上右下左 50 0 0 40px 
+  position: relative;*/
+  
+}
+
+/* SERVICE */
+[class*="area_home"] {
+  margin-top: 100px;
+  padding: 80px 0 120px;
+}
+
+.body_home{
+  margin-top: 40px;/*3つのicon位置*/
+}
+
+
+.bg_mint {
+  color: #fff;
+  background: rgb(205, 226, 231);/*SERVICEの背景*/
+}
+
+
+/* SERVICE display:flex */
+.list_service {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+.list_service > li {
+  width: 33.3333%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list_service .img {
+  margin: 0 0 40px;
+  position: relative;
+  z-index: 1;
+}
+.list_service .img:before {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: rgb(156, 178, 189);/*3つ並びアイコンの色*/
+  box-shadow: 0px 2px 12px 2px rgb(201, 213, 216);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50% , -50%);
+}
+.list_service img {
+  width: 80px;
+  height: 80px;
+  vertical-align: bottom;
+}
+
+.area_home_service .ttl4 {
+  color: rgb(56, 56, 56);
+  text-shadow: 1px 2px 3px rgba(5, 5, 5, 0.2);
+  font: 40px 'Noto Serif JP', 'noto sans japanese',sans-serif;
+  letter-spacing: .05em;
+  margin-top: 0;/*
+  padding: 5px;/*上右下左 50 0 0 40px 
+  position: relative;*/
+  text-align: center;
+  
+}
+
+.ttl5 {
+  font: 400 24px/1em 'Noto Serif JP', 'noto sans japanese',sans-serif;/*3項目*/
+  color: rgb(56, 56, 56);
+  margin: 0 0 20px;
+}
+
+.description {
+  font: 300 18px/1.8em 'Noto Serif JP', 'noto sans japanese',sans-serif;
+  color: rgb(56, 56, 56);/*
+  text-align: center;*/
+}
+
+/*SERVICEおわり*/
+
+
+
+/* プロフィール */
+.area_home_profile img {
+  box-shadow: 0px 16px 6px -8px rgba(16,61,72,.2);
+}
+
+
+/* フッター */
+footer > .container {
+  padding: 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer p{
+  font-family: 'Noto Serif JP', ;
+}
+/* 最後snsリスト */
+.list_sns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 -10px;
+}
+.list_sns > li {
+  padding: 0 10px;
+}
+.list_sns a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background:  rgb(149, 191, 201);;
+  border-radius: 50%;
+  position: relative;
+}
+.list_sns a:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+.list_sns .youtube a:before {
+  background: url(../img/ico/ico_sns_youtube.svg);/*アイコンいれる*/
+  
+}
+.list_sns .instagram a:before {
+  background: url(../img/icon/ico_sns_instagram.svg);/*アイコンいれる*/
+}
+.list_sns .facebook a:before {
+  background: url(../img/ico/ico_sns_facebook.svg);/*アイコンいれる*/
+}
+/**/
+
+/**/
+.footer_nav{
+  margin-top: 20px;
+  color: rgb(87, 86, 86);
+}
+
+.copyright {
+  font: 300 14px/1em 'Noto Serif JP', 'noto sans japanese',sans-serif;
+  margin: 30px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
